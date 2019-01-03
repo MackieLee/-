@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "会员中心",
+  "usingComponents": {
+    "name-card": "/components/name-card/index",
+    "i-cell-group": "/dist/cell-group/index",
+    "i-cell": "/dist/cell/index",
+    "i-icon": "/dist/icon/index",
+    "i-panel": "/dist/panel/index",
+    "i-modal": "/dist/modal/index"
+  }
+}

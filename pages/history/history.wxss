@@ -1,0 +1,17 @@
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 8rpx solid #fff;
+  margin-right: 24rpx;
+}
+.banner {
+  background: #FF513A;
+  padding: 32rpx;
+  text-align: center;
+}
+.goal {
+  color: #FF513A;
+  font-weight: bold;
+}

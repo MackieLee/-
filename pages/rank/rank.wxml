@@ -1,0 +1,8 @@
+<!--pages/rank/rank.wxml-->
+<view class='title'>爱沃趣日语测试总成绩排行榜</view>
+<view class="item" wx:for="{{rank}}" wx:key="{{index}}">
+  <text class='rank'>第{{index + 1}}名</text>
+  <text class='score'>{{item.sum}}分</text>
+  <text class="nickname">{{item.username}}</text>
+  <image class="avatar" src="{{item.avatar}}"></image>
+</view>

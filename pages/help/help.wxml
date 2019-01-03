@@ -1,0 +1,4 @@
+<i-cell-group>
+  <i-cell wx:for="{{hpList}}" wx:key="{{item.id}}" title="{{item.title}}" data-id='{{index}}' bindtap="getInfo" is-link></i-cell>
+</i-cell-group>
+<i-message id="message" />

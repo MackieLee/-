@@ -1,0 +1,21 @@
+<view class="wrapper">
+  <i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="tab1" title="系统公告"></i-tab>
+    <i-tab key="tab2" title="系统帮助"></i-tab>
+    <i-tab key="tab3" title="用户兑换记录"></i-tab>
+  </i-tabs>
+  <block wx:if="{{current === 'tab1'}}">
+    <textarea bindinput='getVal' placeholder='请输入您要发布的公告，200字以内。' maxlength="200" auto-height></textarea>
+    <button bindtap='promotion'>发布</button>
+  </block>
+  <block wx:if="{{current === 'tab2'}}">
+    <textarea bindinput='getHtitle' placeholder='请输入预设的问题，30字以内。' maxlength="30" value='{{title}}' auto-height></textarea>
+    <hr />
+    <textarea bindinput='getHcont' placeholder='请输入解决预设的帮助内容' value='{{content}}' auto-height></textarea>
+    <button bindtap='sysHelp'>添加</button>
+  </block>
+  <block wx:if="{{current === 'tab3'}}">
+    暂无记录
+  </block>
+  <i-toast id="toast" />
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-icon": "/dist/icon/index",
+    "i-modal": "/dist/modal/index",
+    "i-message": "/dist/message/index"
+  },
+  "navigationBarTitleText": "答题帮助"
+}

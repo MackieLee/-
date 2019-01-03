@@ -1,0 +1,31 @@
+@import "/wxParse/wxParse.wxss";
+page {
+  padding-top: 40rpx;
+}
+.cont_vw {
+  padding: 0 30rpx;
+  overflow-wrap: break-word;
+}
+#quz {
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+#ansr {
+  font-size: 28rpx;
+  color: #979797;
+  line-height: 40rpx;
+  text-indent: 56rpx;
+}
+.editor {
+  text-align: right;
+}
+.editor>view {
+  display: inline-block;
+  margin-left: 20rpx;
+  padding: 30rpx 0;
+}
+textarea {
+  padding: 40rpx;
+  margin: 20rpx 0;
+}

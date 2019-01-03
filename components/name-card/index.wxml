@@ -1,0 +1,16 @@
+<view class="card">
+  <button wx:if="{{!hasUserInfo && canIUse && !secData}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="get-user-btn"> 点击授权使用我的信息 </button>
+  <block wx:else>
+  <view>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <p class="usr-card-info"><text>积分：</text><text>{{point}}</text></p>
+    <p class="usr-card-info"><text>等级：</text><text>{{level}}</text></p>
+  </view>
+  <view>
+    <view wx:if="{{attend === -1}}" bindtap='attend' class="card-btn">签到</view>
+    <view wx:else class="card-btn">已签到 </view>
+    <navigator url="/pages/history/history" class="card-btn">历史成绩</navigator>
+  </view>
+  </block>
+</view>

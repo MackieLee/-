@@ -1,0 +1,27 @@
+<import src="/wxParse/wxParse.wxml"/>
+<view wx:if="{{!edit}}" class='cont_vw'>
+  <view id='quz'>Q: {{title}}</view>
+  <view id='ansr'>{{content}}</view>
+</view>
+<view wx:if="{{edit}}" class='cont_vw'>
+  <textarea bindinput='getHtitle' placeholder='请输入预设的问题，30字以内。' maxlength="30" value='{{title}}' auto-height></textarea>
+  <textarea bindinput='getHcont' placeholder='请输入解决预设的帮助内容' value='{{content}}' auto-height></textarea>
+</view>
+<view wx:if="{{admin}}" class="editor cont_vw">
+  <view wx:if="{{!edit}}" bindtap='mdlOpen' style='color: #FF0000'>
+    <i-icon type="trash" size="20" />删除
+  </view>
+  <view wx:if="{{!edit}}" bindtap='editMode' style='color: #80848f'>
+    <i-icon type="editor" size='20' />修改
+  </view>
+  <view wx:if="{{edit}}" bindtap='handleCancle' style='color: #80848f'>
+    <i-icon type="close" size='20' />取消
+  </view>
+  <view wx:if="{{edit}}" bindtap='update' style='color: #00C874'>
+    <i-icon type="right" size='20' />完成
+  </view>
+</view>
+<i-modal title="删除确认" visible="{{ delM }}" actions="{{ mdlOpt }}" bind:click="delAction">
+  <view>删除后无法恢复哦</view>
+</i-modal>
+<i-message id="message" />

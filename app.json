@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tests/tests",
+    "pages/member/member",
+    "pages/history/history",
+    "pages/help/help",
+    "pages/questions/questions",
+    "components/spin/spin",
+    "pages/transcript/transcript",
+    "pages/rank/rank",
+    "pages/cms/cms",
+    "pages/syshelp/syshelp",
+    "pages/rec/rec"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2F405B",
+    "navigationBarTitleText": "爱沃趣题库",
+    "navigationBarTextStyle": "white"
+  }
+}

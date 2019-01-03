@@ -1,0 +1,22 @@
+/* components/spin/spin.wxss */
+.icon-load {
+  -webkit-animation: spin 1s linear 1s 5 alternate;
+  animation: spin 1s linear infinite;
+}
+/* loading 动画 */
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,39 @@
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 8rpx solid #fff;
+  margin-right: 24rpx;
+}
+.get-user-btn {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.card-btn {
+  padding: 10rpx 40rpx;
+  border-radius: 37rpx;
+  border: 6rpx solid #fff;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+.userinfo-nickname {
+  position: relative;
+  top: -28rpx;
+}
+.usr-card-info {
+  display: block;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88%;
+  margin: 10rpx auto;
+  padding: 36rpx;
+  border-radius: 16rpx;
+  color: #fff;
+  background: linear-gradient(#67DCCF,#2095EF);
+}

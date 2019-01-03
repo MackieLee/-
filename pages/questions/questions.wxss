@@ -1,0 +1,60 @@
+@import "/wxParse/wxParse.wxss";
+/* pages/questions/questions.wxss */
+page {
+  background: #EDECE7;
+  display: relative;
+}
+.card {
+  background:#fff;
+  border-radius:14rpx;
+  padding:20rpx;
+}
+.ques-view {
+  margin-bottom: 2rpx;
+  background: #fff;
+}
+.outer {
+  padding: 16rpx;
+}
+.title {
+  line-height:40rpx;
+  margin-bottom:2rpx;
+  text-indent:56rpx;
+}
+.ques,.content {
+  text-indent: 56rpx;
+}
+.btns {
+  text-align: right;
+}
+.btns button {
+  margin: 20rpx;
+}
+.btn-opt {
+  background: #56D2D4;
+  border-radius: 6rpx;
+  margin: 20rpx;
+  color: #fff;
+  line-height: 60rpx;
+  padding: 40rpx;
+}
+.t-class {
+  background: #00EB8B;
+}
+.f-class {
+  background: #FE5F58;
+}
+.bar {
+  height: 50px;
+}
+.au-play {
+  background: #00EB8B;
+}
+.au-pause {
+  background: #FF9801;
+}
+.au-stop {
+  background: #FE5F58;
+  margin: 20rpx;
+  color: #fff;
+}

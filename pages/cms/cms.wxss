@@ -1,0 +1,12 @@
+/* pages/cms/cms.wxss */
+.wrapper {
+  padding: 20rpx;
+}
+textarea {
+  padding: 40rpx;
+  margin: 20rpx 0;
+}
+button {
+  background: #22A340;
+  color: #fff;
+}

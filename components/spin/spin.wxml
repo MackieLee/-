@@ -1,0 +1,6 @@
+<view>
+  <i-spin custom fix>
+    <i-icon type="refresh" size="20" i-class="icon-load"></i-icon>
+    <slot></slot>
+  </i-spin>
+</view>

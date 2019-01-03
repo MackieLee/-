@@ -1,0 +1,30 @@
+.announce {
+  background: #202D40;
+  padding: 32rpx;
+  color: #fff;
+  overflow-wrap:break-word;
+}
+.announce .title {
+  color: #CE1800;
+}
+.card-pool {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+}
+.card {
+  width: 47%;
+  margin: 12rpx 0;
+  height: 330rpx;
+}
+.card image {
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+page {
+  background: #2E3F5C;
+}

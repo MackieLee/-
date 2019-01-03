@@ -1,0 +1,9 @@
+.cards {
+  padding: 40rpx;
+}
+.cards .card {
+  margin: 20rpx 0;
+}
+.seprate {
+  height: 50px;
+}

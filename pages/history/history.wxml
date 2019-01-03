@@ -1,0 +1,10 @@
+<view class="banner">
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatar}}" mode="cover"></image>
+</view>
+<i-panel>
+  <i-cell-group>
+    <i-cell wx:for="{{list}}" wx:key="{{item.id}}" title="{{item.date}}">
+      <text slot="footer" class="goal">{{item.score}}分</text>
+    </i-cell>
+  </i-cell-group>
+</i-panel>

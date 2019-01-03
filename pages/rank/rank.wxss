@@ -1,0 +1,48 @@
+/* pages/rank/rank.wxss */
+page {
+  background: #2E3F5C;
+}
+.title {
+  text-align: center;
+  padding: 40rpx;
+  font-size: 36rpx;
+  color: #749EEA;
+}
+text {
+  text-align: center;
+  color: #fff;
+}
+.score {
+  font-size: 50rpx;
+  color: #C33E26;
+  font-weight: bold;
+}
+.rank {
+  text-align: center;
+  font-size: 32rpx;
+  width: 160rpx;
+}
+.item {
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDECE7;
+}
+#ava {
+  width: 160rpx;
+  text-align: center;
+}
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-right: 40rpx;
+}
+.nickname {
+  width: 160rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+}

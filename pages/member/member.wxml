@@ -1,0 +1,27 @@
+<name-card />
+<i-panel>
+  <i-cell-group>
+    <i-cell title="成绩单" is-link url="/pages/history/history">
+      <i-icon slot="icon" type="task" size="20" />
+    </i-cell>
+    <i-cell title="兑换记录" is-link url="/pages/rec/rec">
+      <i-icon slot="icon" type="coupons" size="20" />
+    </i-cell>
+    <i-cell title="关于我们" is-link url="/pages/rec/rec">
+      <i-icon slot="icon" type="group" size="20" />
+    </i-cell>
+    <i-cell title="检查版本" bindtap="tapChk">
+      <i-icon slot="icon" type="flashlight" size="20"/>
+    </i-cell>
+    <i-cell wx:if="{{level}}" title="控制台" is-link url="/pages/cms/cms">
+      <i-icon slot="icon" type="dynamic" size="20"/>
+    </i-cell>
+  </i-cell-group>
+  <i-modal visible="{{ check }}" actions="{{ actions }}" bind:click="handleChk">
+    <view>您的版本: v{{version}}</view>
+    <view>最新版本: v{{latest}}</view>
+  </i-modal>
+  <i-modal visible="{{ !needUp }}" bind:ok="closeTip" bind:cancel="closeTip">
+    <view>您已经是最新版本！</view>
+  </i-modal>
+</i-panel>

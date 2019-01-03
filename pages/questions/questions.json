@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "spin": "/components/spin/spin",
+    "i-toast": "/dist/toast/index"
+  },
+  "navigationBarTitleText": "刷题广场"
+}

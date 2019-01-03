@@ -1,0 +1,13 @@
+<swiper style="height: auto;" />
+<i-tabs current="{{ currentTab }}" color="#FF513A" bindchange="handleChange">
+  <i-tab wx:for="{{tabSeries}}" wx:key="{{item.id}}" key="{{item.id}}" title="{{item.name}}"></i-tab>
+</i-tabs>
+
+<view class="cards" wx:for="{{tabSeries}}" wx:key="{{item.id}}" wx:if="{{currentTab === item.id }}">
+  <i-card i-class="card" wx:for="{{subTab}}" wx:for-item="subItem" wx:key="id" title="{{item.name + subItem}}" thumb="{{'https://api.aiwoqu.com/static/img/t'+(index+1)+'.jpeg'}}" bindtapevent="bindCardTap" data-id="{{index}}">
+  </i-card>
+</view>
+<view class='seprate'></view>
+<i-tab-bar current="{{ currentTabBar }}" color="#FF513A" bindchange="handleTabBar" fixed>
+  <i-tab-bar-item wx:for="{{tabBar}}" key="{{item.key}}" wx:key="{{item.key}}" icon="{{item.icon}}" current-icon="{{item.current}}" title="{{item.title}}"></i-tab-bar-item>
+</i-tab-bar>

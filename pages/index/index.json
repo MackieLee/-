@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "name-card": "/components/name-card/index",
+    "swiper": "/components/swiper/index",
+    "i-toast": "/dist/toast/index",
+    "i-icon": "/dist/icon/index"
+  },
+  "navigationBarTitleText": "爱沃趣题库"
+}

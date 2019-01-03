@@ -1,0 +1,22 @@
+<name-card bindviewevent="bindViewTap" bindtoastevent="bindToastTap"/>
+<swiper style="height: auto;" />
+<view class="announce">
+  <i-icon type="systemprompt_fill" size='20' />
+  <text class='title'>系统公告</text>
+  {{sysPromote}}
+</view>
+<view class="card-pool">
+  <navigator class="card" url="/pages/tests/tests">
+    <image src="https://api.aiwoqu.com/static/img/tests.jpg"></image>
+  </navigator>
+  <navigator class="card" url="/pages/rank/rank">
+    <image src="https://api.aiwoqu.com/static/img/rank.jpg"></image>
+  </navigator>
+  <view class="card" bindtap='deving'>
+    <image src="https://api.aiwoqu.com/static/img/active.jpg"></image>
+  </view>
+  <navigator class="card" url="/pages/help/help">
+    <image src="https://api.aiwoqu.com/static/img/ansr.jpg"></image>
+  </navigator>
+</view>
+<i-toast id="toast"/>

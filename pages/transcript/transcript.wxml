@@ -1,0 +1,20 @@
+<canvas class="canvas" style='width:{{width + "px"}};height:{{height + "px"}};left:999px' canvas-id='share'></canvas>
+<view class='img_outer' wx:if="{{showShareImg}}">
+  <view>
+    <image class='share_img' src="{{tmpImg}}" bindlongtap='share' style='width:{{width + "px"}};height:{{height + "px"}};'></image>
+    <button type='default' style="margin: 20rpx 0;" bindtap='share'>保存图片到本地相册</button>
+    <button type='primary' open-type='share'>分享给朋友</button>
+  </view>
+</view>
+<view class="transcript" wx:if="{{!showShareImg}}">
+  <view class='vessol'>
+    <text class="title ctr red">{{title}}测试成绩单</text>
+    <text class='goal ctr red'>{{correct}}分</text>
+    <view style="margin-top: 120px">测试成绩说明：</view>
+    <view class="tip">您刚刚在{{title}}题库下完成了<p class="red"> {{sum}} </p>道题目,每道题<p class="red"> 1 </p>分。</view>
+    <view class='tip'>其中回答正确<p class="red"> {{correct}} </p>道题目</view>
+    <view class='tip'>其中回答错误<p class="red"> {{incorrect}} </p>道题目</view>
+    <button type='primary' class='btn-share' bindtap='createShare'>生成分享图</button>
+  </view>
+</view>
+<i-toast id="toast"/>

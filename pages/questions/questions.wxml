@@ -1,0 +1,49 @@
+<import src="/wxParse/wxParse.wxml"/>
+<view class='outer'>
+<text style='color: #B6B7B6'>[题号:{{id}}]</text>
+<!-- 非听力题 -->
+  <block wx:if="{{content}}">
+    <view class='title card'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <view wx:if="{{!au && ques}}">
+      {{ques}}
+    </view>
+  </block>
+  <!-- 听力题 -->
+  <block wx:if="{{au}}">
+    <slider bindchange="sliderChange"  block-size="12px" step="2" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" /><text class='times'>{{starttime}} / </text><text class='times'>{{duration}}</text>
+    <button wx:if="{{!isOpen}}" type='primary' bindtap='auPlay'>播放</button>
+    <button wx:else class="au-pause" bindtap='auPause'>暂停</button>
+    <button class="au-stop" bindtap='auStop'>停止</button>
+  </block>
+  <!-- 多题循环遍历 -->
+  <view wx:for="{{options}}" wx:key="{{index}}" class="ques-view card">
+  <!-- 题目内容 -->
+    <view class="ques">
+      {{item.ques}}
+    </view>
+    <view class="content">
+    <!-- 若题干是图片 -->
+      <block wx:if="{{quesStr !== ''}}">
+        <image bindtap="quesImgPrev" data-src="{{'https://www.aiwoqu.com/' + item.content}}" src="{{'https://www.aiwoqu.com/' + item.content}}"></image>
+      </block>
+      <!-- 若题干是字符串 -->
+      <block wx:else>
+        {{item.content}}
+      </block>
+    </view>
+    <view class="btn-opt {{item.t === 'A'?'t-class': item.f === 'A'?'f-class': ''}}" data-ansr="{{[item.A, index, 'A']}}" bindtap='choosen'>A. {{item.A}}</view>
+    <view class="btn-opt {{item.t === 'B'?'t-class': item.f === 'B'?'f-class': ''}}" data-ansr="{{[item.B, index, 'B']}}" bindtap='choosen'>B. {{item.B}}</view>
+    <view class="btn-opt {{item.t === 'C'?'t-class': item.f === 'C'?'f-class': ''}}" data-ansr="{{[item.C, index, 'C']}}" bindtap='choosen'>C. {{item.C}}</view>
+    <view class="btn-opt {{item.t === 'D'?'t-class': item.f === 'D'?'f-class': ''}}" data-ansr="{{[item.D, index, 'D']}}" bindtap='choosen'>D. {{item.D}}</view>
+  </view>
+  <view class="btns card">
+    <button type="primary" bindtap='nextQuz'>下一题</button>
+    <button type="warn" bindtap='endQuz'>结束答题</button>
+  </view>
+</view>
+<spin wx:if="{{!ready}}">
+  <view>试题加载中...</view>
+</spin>
+<i-toast id="toast"/>
