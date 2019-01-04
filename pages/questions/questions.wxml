@@ -40,7 +40,7 @@
   </view>
   <view class="btns card">
     <button type="primary" bindtap='nextQuz'>下一题</button>
-    <button type="warn" bindtap='endQuz'>结束答题</button>
+    <button type="warn" bindtap='ifEndQuz'>结束答题</button>
   </view>
 </view>
 <spin wx:if="{{!ready}}">

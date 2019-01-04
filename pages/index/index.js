@@ -44,5 +44,14 @@ Page({
       content: '积分兑换功能即将上线，敬请期待！',
       icon: "time"
     });
+  },
+  onShareAppMessage(res) {
+    let that = this
+    let obj = {
+      title: '爱沃趣日语题库',
+      path: '/pages/index/index',
+      imageUrl: 'https://api.aiwoqu.com/static/img/share.jpeg'
+    }
+    return obj
   }
 })

@@ -11,7 +11,8 @@
     "pages/rank/rank",
     "pages/cms/cms",
     "pages/syshelp/syshelp",
-    "pages/rec/rec"
+    "pages/rec/rec",
+    "pages/abt/abt"
   ],
   "window": {
     "backgroundTextStyle": "light",

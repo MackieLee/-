@@ -39,5 +39,14 @@ Page({
     wx.navigateTo({
       url: '../../pages/questions/questions?tab='+this.data.currentTab+'&item='+index,
     })
+  },
+  onShareAppMessage(res) {
+    let that = this
+    let obj = {
+      title: '爱沃趣日语题库',
+      path: '/pages/index/index',
+      imageUrl: 'https://api.aiwoqu.com/static/img/share.jpeg'
+    }
+    return obj
   }
 })

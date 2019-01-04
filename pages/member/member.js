@@ -31,21 +31,28 @@ Page({
   },
   // 处理用户点击检查版本事件
   tapChk() {
-    console.log(vm)
+    let _self = this
     let latest = vm.latest
     let version = vm.version
-    if(latest === version) {
-      this.setData({
-        needUp: false
-      })
-    } else {
-      this.setData({
-        check: true
-      })
-    }
-    this.setData({
-      version,
-      latest
+
+    wx.request({
+      url: 'https://api.aiwoqu.com/v1/version',
+      success: function (res) {
+        latest = res.data.version
+        if (latest === version) {
+          _self.setData({
+            needUp: false
+          })
+        } else {
+          _self.setData({
+            check: true
+          })
+        }
+        _self.setData({
+          version,
+          latest
+        })
+      }
     })
   },
   // 处理模态框点击事件

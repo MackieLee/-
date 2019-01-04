@@ -1,0 +1,83 @@
+@import 'iconfont.wxss';
+.outer {
+  margin: 20px;
+}
+image {
+  width: 100%;
+}
+.title {
+  margin: 12px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+#article view{
+  text-indent: 24px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #192425;
+}
+/* steps */
+.step {
+  position: relative;
+}
+.step-head {
+  display: flex;
+}
+.step-body {
+  padding-bottom: 20px;
+}
+.step-title {
+  margin-left: 16px;
+  font-size:14px;
+  font-weight:700;
+  color:#1c2438;
+
+}
+.step-title.current {
+  color: #FE5E57;
+}
+/* 图标 */
+.step-debug {
+  z-index: 1000;
+}
+.step-ico {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border:#2d8cf0 solid 1px;
+  color: #2d8cf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#fff;
+}
+.step-ico.current {
+  border-color: #FE5E57;
+  color: #FE5E57;
+}
+.step-line {
+  position:absolute;
+  height:100%;
+  top:0;
+  margin-left: 12px;
+  width:1px;
+  background:#2d8cf0;
+
+}
+.step-line.current {
+  background:#FE5E57;
+}
+.step-content {
+  margin-left: 40px;
+  height: 0;
+  overflow: hidden;
+}
+.step-extr {
+  font-size: 12px;
+  text-indent: 24px;
+  line-height: 18px;
+  color: #656565;
+}
+.step-content.current {
+  height: 100%;
+}

@@ -1,0 +1,30 @@
+<view class='outer'>
+  <view class='title'>关于我们</view>
+  <view id="article">
+    <view>爱沃趣日语网校是一个致力于为用户提供优质日语教育资源的在线教育平台。</view>
+    <view>公司以“专注于方法，专注于态度，专注于行动，专注于品质，专注于服务”的五个“专注”为核心价值，一切以学员需求为中心，从学员角度出发，希望通过专业的水平和不懈的努力，来塑造企业的良好形象，更好的为学员服务。截止到目前为止，爱沃趣日语网校已为上万名学员提供了超高水准的日语课程以及专业的服务。
+    在互联网硝烟四起的当下，我们另辟蹊径，换位思考，从学员角度出发，切身了解不同角色的不同需求，开启了互联网教育的全新篇章。</view>
+    <view>未来，爱沃趣日语网校将继续秉承五个“专注”，不忘初心，不断完善网校建设，不断更新和丰富网校内容，不断提升用户体验和服务质量。</view>
+  </view>
+  <view class='title'>公司发展历程</view>
+  <view id="steps">
+    <view wx:for="{{ steps }}" class='step' wx:key="item.title">
+      <view class="step-line {{ index === current? 'current':'' }}"></view>
+      <view class="step-head" data-index="{{index}}" bindtap="step">
+        <view class="step-debug">
+          <view class="step-ico {{ index === current? 'current':'' }}">
+            <span class="iconfont icon-{{item.icon}}"></span>
+          </view>
+        </view>
+        <view class="step-title {{ index === current? 'current':'' }}">{{ item.title }}</view>
+      </view>
+      <view class="step-body">
+        <view class="step-content {{ index === current? 'current':'' }}">
+          <view style='color: #192425;'>{{ item.content }}</view>
+          <image wx:if="{{ item.imgUrl }}" mode="aspectFit" src="{{ item.imgUrl }}"></image>
+          <view class="step-extr">{{ item.extr }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

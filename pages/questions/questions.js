@@ -87,7 +87,7 @@ Page({
     let _self = this
     // 获取参数，向后台请求试题数据
     wx.request({
-      url: 'https://api.aiwoqu.com/v1/test',
+      url: 'https://api.aiwoqu.com/v1/getQuiz',
       data: {
         classid
       },
@@ -192,14 +192,27 @@ Page({
     }
   },
   // 跳转到成绩单
-  endQuz: function() {
+  ifEndQuz: function() {
+    let _self = this
+// 确认用户是否结束答题
+    wx.showModal({
+      title: '',
+      content: '您确定要结束答题么？',
+      success(res) {
+        if (res.confirm) {
+          _self.endQuiz()
+        }
+      }
+    })
+  },
+  endQuiz() {
     this.auStop()
     wx.redirectTo({
       /* @params
       /* clstr => 科目类别名称
       /* sum/correct/incorrect => 题目总数/正确数目/错误数目
       */
-      url: '../../pages/transcript/transcript?title='+this.data.clstr+'&sum='+this.data.sum+'&correct='+this.data.correct+'&incorrect='+this.data.incorrect
+      url: '../../pages/transcript/transcript?title=' + this.data.clstr + '&sum=' + this.data.sum + '&correct=' + this.data.correct + '&incorrect=' + this.data.incorrect
     })
   },
   auPlay() {
